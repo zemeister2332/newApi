@@ -6,13 +6,21 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const directorsRouter = require('./routes/director');
 
 const app = express();
 
-// Mongo Db Require
+// mongoga ulanish jarayoni 
 
 const db = require('./helper/db')();
 
+
+//CONFIG Secret Key
+const config = require('./config');
+app.set('api_secret_key', config.api_secret_key);
+
+// Middleware
+const tokenverify = require('./middleware/token-verify');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,7 +33,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/user', usersRouter);
+app.use('/api', tokenverify);
+app.use('/api/movies', usersRouter);
+app.use('/api/directory', directorsRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -40,7 +50,8 @@ app.use((err, req, res, next) => {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  // res.render('error');
+  res.json({error: {message : err.message, code: err.code}});
 });
 
 module.exports = app;
