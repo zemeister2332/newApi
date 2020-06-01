@@ -108,7 +108,7 @@ router.delete("/:movei_id", (req, res, next) => {
     .then((movei) => {
       if (!movie) 
         next({ message: "Movie topilmadi !!!", code: 111 });
-      res.json(movei);
+      res.json({ status: 1 });
     })
     .catch((err) => {
       res.json(err);

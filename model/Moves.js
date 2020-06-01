@@ -6,8 +6,8 @@ const MoviSchema = new Schema({
     director_id: Schema.Types.ObjectId,
     title: {
         type: String,
-        required: true,
-        unique: true
+        //required: true,
+        //unique: true
     },
     category: String,
     country: String,
