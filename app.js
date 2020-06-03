@@ -18,7 +18,6 @@ const db = require('./helper/db')();
 //CONFIG Secret Key
 const config = require('./config');
 app.set('api_secret_key', config.api_secret_key);
-console.log("HELOOOOO")
 // Middleware
 const tokenverify = require('./middleware/token-verify');
 
