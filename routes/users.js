@@ -115,7 +115,7 @@ router.delete("/:movei_id", (req, res, next) => {
     });
 });
 
-router.delete("/:movei_id", (req, res, next) => {
+/*router.delete("/:movei_id", (req, res, next) => {
   const promise = Moves.findByIdAndRemove(req.params.movei_id);
 
   promise
@@ -127,6 +127,6 @@ router.delete("/:movei_id", (req, res, next) => {
     .catch((err) => {
       res.json(err);
     });
-});
+});*/
 
 module.exports = router;
