@@ -1,3 +1,5 @@
+[![Build status](https://https://api.travis-ci.com/zemeister2332/newApi.svg)](https://travis-ci.com/github/zemeister2332/newApi)
+
 # Movies
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
