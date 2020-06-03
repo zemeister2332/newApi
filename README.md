@@ -1,4 +1,4 @@
-[![Build status](https://api.travis-ci.com/zemeister2332/MoviesAPI.svg)](https://api.travis-ci.com/zemeister2332/MoviesAPI)
+[![Build status](https://api.travis-ci.com/zemeister2332/newApi.svg)](https://api.travis-ci.com/zemeister2332/newApi)
 
 # Movies
 
