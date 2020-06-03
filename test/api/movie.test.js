@@ -98,7 +98,6 @@ describe('/api/movies tests', () => {
                 .set('x-access-token', token)
                 .end((err,res) => {
                     res.should.have.status(200);
-                    res.body.should.be.a('object');
                     res.body.should.have.property('title').eql(movie.title);
                     res.body.should.have.property('director_id').eql(movie.director_id);
                     res.body.should.have.property('category').eql(movie.category);

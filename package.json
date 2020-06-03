@@ -19,9 +19,7 @@
     "mongoose": "^5.9.16",
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11",
-    "vary": "^1.1.2"
-  },
-  "devDependencies": {
+    "vary": "^1.1.2",
     "mocha": "^7.2.0"
   }
 }
